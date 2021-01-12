@@ -15,3 +15,17 @@ usercache.json
 usernamecache.json
 cache
 .mixin.out
+options.txt
+patchouli_data.json
+servers.dat
+mineraltracker
+resources
+crash-reports
+*.jpg
+*.png
+*.properties
+worldSettings.cfg
+InvTweaks.cfg
+*.64.dll
+config/jei
+

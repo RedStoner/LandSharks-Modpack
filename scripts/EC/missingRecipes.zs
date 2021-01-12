@@ -30,6 +30,9 @@ recipes.addShaped(<minecraft:iron_block>, [[iron, iron, iron],
 recipes.remove(<hooked:hook:1>);	
 recipes.remove(<hooked:microcrafting:2>);	
 recipes.remove(<hooked:microcrafting:3>);						
+recipes.addShaped(<hooked:microcrafting:3>, [[<hooked:microcrafting:2>, null, null],
+									[null, <hooked:microcrafting:2>, null],
+									[null, null, <hooked:microcrafting:2>]]);
 recipes.addShaped(<hooked:hook:1>, [[iron, iron, iron],
 									[null, <hooked:microcrafting:3>, iron],
 									[<hooked:microcrafting:3>, null, iron]]);
@@ -44,7 +47,7 @@ recipes.addShaped(<minecraft:iron_trapdoor>, [[<tfctech:metal/brass_sleeve>,    
 																			  
 recipes.remove(<minecraft:chest>);
 recipes.addShaped(<minecraft:chest>, [[null, <tfctech:metal/wrought_iron_strip>, null],
-					[<tfctech:metal/wrought_iron_strip>, <ore:plankWood, <tfctech:metal/wrought_iron_strip>],
+					[<tfctech:metal/wrought_iron_strip>, <ore:plankWood>, <tfctech:metal/wrought_iron_strip>],
 												   [null, <tfctech:metal/wrought_iron_strip>, null]]);
 
 val workbench = <ore:workbench>;
@@ -53,7 +56,7 @@ recipes.addShaped(<minecraft:crafting_table>, [[null, <tfctech:metal/wrought_iro
 															   [null, <tfctech:metal/wrought_iron_strip>, null]]);
 var mortar = <tfc:mortar>;
 recipes.remove(<minecraft:stonebrick>);
-recipes.addShaped(<minecraft:stonebrick>, [[mortar, <ore:stonePolished>, mortar],
+recipes.addShaped(<minecraft:stonebrick>*4, [[mortar, <ore:stonePolished>, mortar],
                                                             [<ore:stonePolished>,mortar, <ore:stonePolished>],
                                                             [mortar, <ore:stonePolished>, mortar]]);
                                                                
@@ -100,3 +103,5 @@ recipes.addShaped(<immersivepetroleum:stone_decoration:0>*12, [[<immersiveengine
 recipes.addShaped(<immersivepetroleum:stone_decoration:0>*8, [[sand, <immersivepetroleum:material:0>, sand],
 																			  [gravel, <forge:bucketfilled>.withTag({FluidName: "fresh_water", Amount: 1000}), gravel],
 																			  [sand, <immersivepetroleum:material:0>, sand]]);
+
+<ore:slabStone>.mirror(<ore:slabStonePolished>);
